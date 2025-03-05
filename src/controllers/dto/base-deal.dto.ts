@@ -9,7 +9,7 @@ export class BaseDealDto {
   @ApiProperty({ description: 'Описание сделки', required: false })
   @IsOptional()
   @IsString()
-  description?: string;
+  description: string | null;
 
   @ApiProperty({ description: 'Сумма сделки' })
   @IsNumber()

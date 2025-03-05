@@ -33,4 +33,10 @@ export class DealEventRepository {
       orderBy: { createdAt: 'asc' },
     });
   }
+
+  async getAllEvents(): Promise<DealEvent[]> {
+    return this.prisma.dealEvent.findMany({
+      orderBy: { createdAt: 'asc' },
+    });
+  }
 }
